@@ -6,4 +6,5 @@ scikit-learn
 catboost
 xgboost
 dill # use for create the pkl file 
+Flask
 #-e .

@@ -49,7 +49,7 @@ class ModelTrainer:
             params={
                 "Decision Tree": {
                     'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
-                    # 'splitter':['best','random'],
+                    #'splitter':['best','random'],
                     # 'max_features':['sqrt','log2'],
                 },
                 "Random Forest":{
@@ -84,8 +84,7 @@ class ModelTrainer:
                 
             }
 
-            model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,
-                                             models=models,param=params)
+            model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,models=models,param=params)
             
             ## To get best model score from dict
             best_model_score = max(sorted(model_report.values()))
